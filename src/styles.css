@@ -1,0 +1,46 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  border: 1px solid silver;
+}
+
+.pulsantediv{
+  width: 25%;
+  height: 60px;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+
+.pulsante{
+  width:100%;
+  height: 100%;
+  font-size: 2em;
+  
+}
+.operazione{
+  background-color: orange;
+}
+
+.operazione-special{
+  background-color: grey;
+  color:white;
+}
+
+.doppialung{
+  width: 50%;
+}
+
+.pulsantiera {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.risultato{
+  background-color:white;
+  font-size: 1.5em;
+  text-align: left;
+  text-indent: 5px
+}
