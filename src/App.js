@@ -5,15 +5,13 @@ import "./styles.css";
 function pulsanteReducer(state, action) {
   switch (action.type) {
     case "MAKE_OPERATION":
-      return state.concat({
-        id: ++ID,
-        amount: 1,
-        product: action.product
-      });
+      const op=action.op;
+      state={ op:op, num:0, operando1:state.num }
+      return state;
     case "ADD_Number":
       console.log(state.num)
       const numeroagg=(state.num)?String(state.num)+String(action.number):action.number
-      state={num:numeroagg}
+      state=(state.op)?state.num=numeroagg:{num:numeroagg}
       return state;
     default:
       return state;
@@ -31,10 +29,10 @@ export default function App() {
     });
   }
 
-  function onMakeOperation(id) {
+  function onMakeOperation(op) {
     dispatch({
       type: "MAKE_OPERATION",
-      id: id
+      op: op
     });
   }
 
